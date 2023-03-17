@@ -1,0 +1,6 @@
+name: Merge develop into release
+steps:
+    - name: create pull request
+      run: gh pr create -B release -H develop --title 'Merge develop into release' --body 'Created by Github action'
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
