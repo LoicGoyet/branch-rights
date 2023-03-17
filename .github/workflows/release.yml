@@ -1,4 +1,5 @@
 name: Merge develop into release
+on: workflow_dispatch
 steps:
     - name: create pull request
       run: gh pr create -B release -H develop --title 'Merge develop into release' --body 'Created by Github action'
