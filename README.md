@@ -1,2 +1,2 @@
 # branch-rights
-test 2
+main
