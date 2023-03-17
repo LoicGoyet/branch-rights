@@ -11,3 +11,9 @@ jobs:
       with:
         destination_branch: "release"
         source_branch: "develop"
+        pr_title: "Pulling ${{ github.ref }} into master"
+        pr_body: |
+          :crown: *An automated PR*
+
+          _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
+
