@@ -1,5 +1,10 @@
 name: Merge develop into release
+
 on: workflow_dispatch
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   pull-request:
