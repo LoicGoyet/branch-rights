@@ -1,11 +1,13 @@
 name: Merge develop into release
 on: workflow_dispatch
+
 jobs:
-  create-pull-request:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: create pull request
-        run: gh pr create -B release -H develop --title 'Merge develop into release' --body 'Created by Github action'
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v3
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "release"
+        source_branch: "develop"
