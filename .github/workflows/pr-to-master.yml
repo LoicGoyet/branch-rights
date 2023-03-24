@@ -1,0 +1,24 @@
+name: Merge release into master
+
+on:
+  push:
+    - release
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "master"
+        source_branch: "release"
+        pr_title: "Merge release into master"
+        pr_body: |
+          :crown: *An automated PR*
+
