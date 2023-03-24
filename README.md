@@ -1,2 +1,2 @@
 # branch-rights
-main
+develop branch
