@@ -1,6 +1,8 @@
 name: Merge develop into release
 
-on: workflow_dispatch
+on:
+  push:
+    - develop
 
 permissions:
   contents: read
@@ -16,9 +18,6 @@ jobs:
       with:
         destination_branch: "release"
         source_branch: "develop"
-        pr_title: "Pulling ${{ github.ref }} into master"
-        pr_body: |
-          :crown: *An automated PR*
-
-          _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
+        pr_title: "Merge develop into release"
+        pr_body: :crown: *An automated PR*
 
