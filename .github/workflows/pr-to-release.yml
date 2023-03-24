@@ -2,7 +2,8 @@ name: Merge develop into release
 
 on:
   push:
-    - develop
+    branches:
+      - develop
 
 permissions:
   contents: read
@@ -19,5 +20,6 @@ jobs:
         destination_branch: "release"
         source_branch: "develop"
         pr_title: "Merge develop into release"
-        pr_body: :crown: *An automated PR*
+        pr_body: |
+          :crown: *An automated PR*
 

@@ -1,8 +1,9 @@
-name: Merge release into master
+name: Merge release into main
 
 on:
   push:
-    - release
+    branches:
+      - release
 
 permissions:
   contents: read
@@ -16,8 +17,9 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        destination_branch: "master"
+        destination_branch: "main"
         source_branch: "release"
-        pr_title: "Merge release into master"
-        pr_body: :crown: *An automated PR*
+        pr_title: "Merge release into main"
+        pr_body: |
+          :crown: *An automated PR*
 
