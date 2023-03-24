@@ -2,7 +2,8 @@ name: Merge release into master
 
 on:
   push:
-    - release
+    branches:
+      - release
 
 permissions:
   contents: read
