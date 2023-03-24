@@ -1,2 +1,2 @@
 # branch-rights
-develop branch
+- update 1
