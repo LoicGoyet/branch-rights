@@ -19,5 +19,6 @@ jobs:
         destination_branch: "release"
         source_branch: "develop"
         pr_title: "Merge develop into release"
-        pr_body: :crown: *An automated PR*
+        pr_body: |
+          :crown: *An automated PR*
 
